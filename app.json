@@ -36,10 +36,8 @@
   "scripts": {
     "postdeploy": "bundle exec rails db:migrate"
   },
-  "stack": "heroku-18"
-}
-
-{
+  "stack": "heroku-18",
+  
   "environments": {
     "test": {
       "addons":[
@@ -48,3 +46,4 @@
     }
   }
 }
+
