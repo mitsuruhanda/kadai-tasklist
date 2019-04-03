@@ -38,3 +38,13 @@
   },
   "stack": "heroku-18"
 }
+
+{
+  "environments": {
+    "test": {
+      "addons":[
+         "heroku-postgresql"
+      ]
+    }
+  }
+}
