@@ -30,7 +30,8 @@
   "environments": {
     "test": {
       "env": {
-        "RAILS_ENV": "test"
+        "RAILS_ENV": "test",
+        "RACK_ENV" : "test"
       },
       "addons": [
         "heroku-postgresql"
