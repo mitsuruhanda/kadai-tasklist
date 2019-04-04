@@ -29,10 +29,14 @@
   
   "environments": {
     "test": {
+      "env": {
+        "RAILS_ENV": "test"
+      },
       "addons": [
         "heroku-postgresql"
       ],
       "scripts": {
+        "test-setup": "bundle exec rails db:seed",
         "test": ""
       }
     }
