@@ -14,12 +14,8 @@
     "LANG": {
       "required": true
     },
-    "RACK_ENV": {
-      "required": true
-    },
-    "RAILS_ENV": {
-      "required": true
-    },
+    "RACK_ENV": "development",
+    "RAILS_ENV": "development",
     "RAILS_LOG_TO_STDOUT": {
       "required": true
     },
@@ -27,9 +23,6 @@
       "required": true
     },
     "SECRET_KEY_BASE": {
-      "required": true
-    },
-    "INHERIT_THIS_CONFIG_VAR": {
       "required": true
     },
     "DONT_INHERIT_THIS_CONFIG_VAR": "production",
