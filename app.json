@@ -14,12 +14,8 @@
     "LANG": {
       "required": true
     },
-    "RACK_ENV": {
-      "required": true
-    },
-    "RAILS_ENV": {
-      "required": true
-    },
+    "RACK_ENV": "development",
+    "RAILS_ENV": "development",
     "RAILS_LOG_TO_STDOUT": {
       "required": true
     },
@@ -29,7 +25,6 @@
     "SECRET_KEY_BASE": {
       "required": true
     },
-    "INHERIT_THIS_CONFIG_VAR": "staging",
     "DONT_INHERIT_THIS_CONFIG_VAR": "production",
     "HOGE": "fuga"
   },
