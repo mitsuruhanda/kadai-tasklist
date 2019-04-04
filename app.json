@@ -29,6 +29,7 @@
     "SECRET_KEY_BASE": {
       "required": true
     },
+    "INHERIT_THIS_CONFIG_VAR": "staging",
     "DONT_INHERIT_THIS_CONFIG_VAR": "production",
     "HOGE": "fuga"
   },
