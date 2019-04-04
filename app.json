@@ -31,6 +31,14 @@
   
   "environments": {
     "test": {
+      "scripts": {
+        "postdeploy": "bundle exec rails db:migrate"
+      },
+      "buildpacks": [
+        {
+          "url": "heroku/ruby"
+        }
+      ],
       "addons": [
         "heroku-postgresql"
       ]
