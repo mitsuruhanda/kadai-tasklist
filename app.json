@@ -14,12 +14,8 @@
     "LANG": {
       "required": true
     },
-    "RACK_ENV": {
-      "required": true
-    },
-    "RAILS_ENV": {
-      "required": true
-    },
+    "RACK_ENV": "development",
+    "RAILS_ENV": "development",
     "RAILS_LOG_TO_STDOUT": {
       "required": true
     },
