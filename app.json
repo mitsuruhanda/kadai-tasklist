@@ -1,4 +1,7 @@
 {
+  "website":"https://tasklist-9876.herokuapp.com/",
+  "repository":"https://github.com/handaman-job/kadai-tasklist",
+  "logo":"https://kids.techacademy.jp/assets/common/logo-kids-white-abb5e84177ce74fd7ccc32f9e5391573878e8536eca4742f79d65575655a666e.png",
   "addons": [
     "heroku-postgresql"
   ],
@@ -8,14 +11,9 @@
     }
   ],
   "env": {
-    "LANG": {
-      "required": true
-    },
-    "RACK_ENV": {
-      "required": true
-    },
-    "RAILS_ENV": {
-      "required": true
+    "SECRET_TOKEN":{
+      "description":"A secret key for verifying the integrity of signed cookies.",
+      "generator":"secret"
     }
   },
   "formation": {
@@ -32,16 +30,8 @@
   "environments": {
     "test": {
       "scripts": {
-        "postdeploy": "bundle exec rails db:migrate"
-      },
-      "buildpacks": [
-        {
-          "url": "heroku/ruby"
-        }
-      ],
-      "addons": [
-        "heroku-postgresql"
-      ]
+        "test": ""
+      }
     }
   }
 }
