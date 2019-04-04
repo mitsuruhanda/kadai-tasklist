@@ -12,14 +12,14 @@
 
 ActiveRecord::Schema.define(version: 20190404054119) do
 
-  create_table "authors", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "authors", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "tasks", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string   "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20190404054119) do
     t.index ["user_id"], name: "index_tasks_on_user_id", using: :btree
   end
 
-  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "name"
     t.string   "email"
     t.string   "password_digest"
