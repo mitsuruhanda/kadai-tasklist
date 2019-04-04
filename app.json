@@ -11,10 +11,29 @@
     }
   ],
   "env": {
-    "SECRET_TOKEN":{
-      "description":"A secret key for verifying the integrity of signed cookies.",
-      "generator":"secret"
-    }
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "SECRET_KEY_BASE": {
+      "required": true
+    },
+    "INHERIT_THIS_CONFIG_VAR": {
+      "required": true
+    },
+    "DONT_INHERIT_THIS_CONFIG_VAR": "production",
+    "HOGE": "fuga"
   },
   "formation": {
     "web": {
