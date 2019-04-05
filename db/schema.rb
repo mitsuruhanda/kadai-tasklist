@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190404054119) do
+ActiveRecord::Schema.define(version: 20190405005438) do
 
   create_table "authors", force: :cascade do |t|
     t.string   "name"
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20190404054119) do
     t.string   "status"
     t.integer  "user_id"
     t.index ["user_id"], name: "index_tasks_on_user_id", using: :btree
+  end
+
+  create_table "titles", force: :cascade do |t|
+    t.string   "name"
+    t.date     "sale_data"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
