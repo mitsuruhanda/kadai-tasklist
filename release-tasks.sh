@@ -1,11 +1,20 @@
 #!/bin/bash
-echo "start-----------"
-echo "bundle exec rails db:migrate"
-echo "-----------end"
-bundle exec rails db:migrate
-echo "start-----------"
-echo "curl https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem > ./config/amazon-rds-ca-cert.pem"
-echo "-----------end"
-curl https://s3.amazonaws.com/rds-downloads/rds-combined-ca-bundle.pem > ./config/amazon-rds-ca-cert.pem
 
+echo "Running Release Tasks"
 
+if [ "$RUN_MIGRATIONS_DURING_RELEASE" == "true" ]; then 
+  echo "Running Migrations"
+  bundle exec rails db:migrate
+fi
+
+if [ "$SEED_DB_DURING_RELEASE" == "true" ]; then 
+  echo "Seeding DB"
+  bundle exec rails db:seed
+fi
+
+if [ "$CLEAR_CACHE_DURING_RELEASE" == "true" ]; then 
+  echo "Clearing Rails Cache"
+  bundle exec rails r "Rails.cache.clear"
+fi
+
+echo "Done running release-tasks.sh"
