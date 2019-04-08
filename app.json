@@ -8,8 +8,30 @@
     }
   ],
   "env": {
-    "DONT_INHERIT_THIS_CONFIG_VAR": "production",
-    "HOGE": "fuga"
+    "LANG": {
+      "required": true
+    },
+    "RACK_ENV": {
+      "required": true
+    },
+    "RAILS_ENV": {
+      "required": true
+    },
+    "RAILS_LOG_TO_STDOUT": {
+      "required": true
+    },
+    "RAILS_SERVE_STATIC_FILES": {
+      "required": true
+    },
+    "BASIC_AUTH_USER": {
+      "required": true
+    },
+    "BASIC_AUTH_PASSWORD": {
+      "required": true
+    },
+    "BASIC_AUTH_ENABLE": {
+      "required": true
+    }
   },
   "formation": {
     "web": {
@@ -23,9 +45,6 @@
   "stack": "heroku-18",
   "environments": {
     "test": {
-      "env": {
-        "DONT_INHERIT_THIS_CONFIG_VAR": "production"
-      },
       "addons": [
         "heroku-postgresql"
       ],
