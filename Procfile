@@ -1,1 +1,1 @@
-release: bundle exec rails db:migrate
+release: ./release-tasks.sh
