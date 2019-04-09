@@ -40,7 +40,7 @@
   },
   "scripts": {
     "postdeploy": 
-      "bundle exec rails db:migrate"
+      "echo XXXXXXXXX"
   },
   "stack": "heroku-18",
   "environments": {
