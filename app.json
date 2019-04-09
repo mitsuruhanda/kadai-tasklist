@@ -41,7 +41,7 @@
   "name": "kadai-tasklist",
   "scripts": {
     "postdeploy": 
-      "bundle exec rails ./review-apps-postdeploy.rb"
+      "bundle exec ruby ./review-apps-postdeploy.rb"
   },
   "stack": "heroku-18",
   "environments": {
