@@ -26,7 +26,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  url: <%= ENV.fetch('CLEARDB_DATABASE_URL', '').sub('mysql://', 'mysql2://') %>
+  host: <%= (ENV['CLEARDB_DATABASE_URL'] || ENV['DATABASE_URL']).gsub(/^mysql:/, 'mysql2:') %>
   database: tasklist_test
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -50,6 +50,7 @@ test:
 #
 production:
   <<: *default
+  host: <%= (ENV['CLEARDB_DATABASE_URL'] || ENV['DATABASE_URL']).gsub(/^mysql:/, 'mysql2:') %>
   database: tasklist_production
   username: tasklist
   password: <%= ENV['TASKLIST_DATABASE_PASSWORD'] %>
