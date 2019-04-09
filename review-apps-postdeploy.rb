@@ -20,6 +20,7 @@ puts "********Promoting '#{ mysql_url }' to DATABASE_URL for '#{ target_app }'..
 #  exit (-1)
 #end
 
+
 puts "********1 DATABASE_URL: #{ ENV['DATABASE_URL'] }"
 `export DATABASE_URL='#{ mysql_url }'`
 puts "********2 DATABASE_URL: #{ ENV['DATABASE_URL'] }"
