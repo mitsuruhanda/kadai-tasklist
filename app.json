@@ -40,10 +40,8 @@
   },
   "name": "kadai-tasklist",
   "scripts": {
-    "postdeploy": [
-      "bundle exec rails ./review-apps-postdeploy.rb",
-      "bundle exec rails db:migrate db:seed"
-    ]
+    "postdeploy": 
+      "bundle exec rails ./review-apps-postdeploy.rb"
   },
   "stack": "heroku-18",
   "environments": {
