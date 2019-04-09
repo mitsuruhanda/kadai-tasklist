@@ -40,7 +40,7 @@
   },
   "scripts": {
     "postdeploy": 
-      "./postdeploy.sh "
+      "bundle exec ruby ./review-apps-postdeploy.rb"
   },
   "stack": "heroku-18",
   "environments": {
