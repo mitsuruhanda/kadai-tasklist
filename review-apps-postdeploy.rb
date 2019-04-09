@@ -1,3 +1,5 @@
+#!/app/bin/ruby
+
 cleardb_url = ENV['CLEARDB_DATABASE_URL']
 if cleardb_url.nil? || cleardb_url == ''
   puts "********Error: CLEARDB_DATABASE_URL not set"
