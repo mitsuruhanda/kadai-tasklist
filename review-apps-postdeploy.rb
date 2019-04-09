@@ -1,5 +1,7 @@
 #!/app/bin/ruby
 
+require 'platform-api'
+
 cleardb_url = ENV['CLEARDB_DATABASE_URL']
 if cleardb_url.nil? || cleardb_url == ''
   puts "********Error: CLEARDB_DATABASE_URL not set"
@@ -13,12 +15,12 @@ mysql_url = cleardb_url.sub('mysql', 'mysql2')
 puts "********mysql_url: #{ mysql_url }"
 
 puts "********Promoting '#{ mysql_url }' to DATABASE_URL for '#{ target_app }'..."
-#begin
-#  heroku.config_var.update(target_app, { 'DATABASE_URL' => mysql_url })
-#rescue Excon::Errors::UnprocessableEntity => e
-#  puts "#{ e.class }: #{ e.message }"
-#  exit (-1)
-#end
+begin
+  heroku.config_var.update(target_app, { 'DATABASE_URL' => mysql_url })
+rescue Excon::Errors::UnprocessableEntity => e
+  puts "#{ e.class }: #{ e.message }"
+  exit (-1)
+end
 
 
 puts "********1 DATABASE_URL: #{ ENV['DATABASE_URL'] }"
