@@ -49,7 +49,7 @@
   "environments": {
     "test": {
       "addons": [
-        "heroku-postgresql"
+        "cleardb:ignite"
       ],
       "scripts": {
         "test-setup": "bundle exec rails db:seed"
