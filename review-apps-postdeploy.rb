@@ -1,6 +1,6 @@
 #!/app/bin/ruby
 
-require 'platform-api'
+#require 'platform-api'
 
 cleardb_url = ENV['CLEARDB_DATABASE_URL']
 if cleardb_url.nil? || cleardb_url == ''
@@ -10,9 +10,10 @@ end
 
 
 target_app = ENV['HEROKU_APP_NAME']
-puts "********target_app: #{ target_app }"
+puts "target_app: #{ target_app }"
 mysql_url = cleardb_url.sub('mysql', 'mysql2')
-puts "********mysql_url: #{ mysql_url }"
+puts "mysql_url: #{ mysql_url }"
+heroku = PlatformAPI.connect_oauth('REDACTED')
 
 puts "********Promoting '#{ mysql_url }' to DATABASE_URL for '#{ target_app }'..."
 begin
