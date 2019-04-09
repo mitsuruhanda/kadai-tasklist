@@ -47,9 +47,6 @@
       "quantity": 1
     }
   },
-  "scripts": {
-    "postdeploy": ""
-  },
   "stack": "heroku-18",
   "environments": {
     "test": {
