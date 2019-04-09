@@ -13,7 +13,9 @@ target_app = ENV['HEROKU_APP_NAME']
 puts "target_app: #{ target_app }"
 mysql_url = cleardb_url.sub('mysql', 'mysql2')
 puts "mysql_url: #{ mysql_url }"
-heroku = PlatformAPI.connect_oauth('REDACTED')
+puts "******** HEROKU_OAUTH_TOKEN: #{ ENV['HEROKU_OAUTH_TOKEN'] }"
+
+heroku = PlatformAPI.connect_oauth(ENV['HEROKU_OAUTH_TOKEN'])
 
 puts "********Promoting '#{ mysql_url }' to DATABASE_URL for '#{ target_app }'..."
 begin
