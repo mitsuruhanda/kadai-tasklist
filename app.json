@@ -1,6 +1,6 @@
 {
   "addons": [
-    "heroku-postgresql"
+    "cleardb:ignite"
   ],
   "buildpacks": [
     {
@@ -31,22 +31,21 @@
     },
     "BASIC_AUTH_ENABLE": {
       "required": true
-    }
+    },
+    "RUN_MIGRATIONS_DURING_RELEASE": "true",
+    "SEED_DB_DURING_RELEASE": "true",
+    "CLEAR_CACHE_DURING_RELEASE": "true"
   },
   "formation": {
     "web": {
       "quantity": 1
     }
   },
-  "name": "kadai-tasklist",
-  "scripts": {
-    "postdeploy": "bundle exec rails db:migrate db:seed"
-  },
   "stack": "heroku-18",
   "environments": {
     "test": {
       "addons": [
-        "heroku-postgresql"
+        "cleardb:ignite"
       ],
       "scripts": {
         "test-setup": "bundle exec rails db:seed"
