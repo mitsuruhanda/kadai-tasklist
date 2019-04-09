@@ -31,6 +31,9 @@
     },
     "BASIC_AUTH_ENABLE": {
       "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "required": true
     }
   },
   "formation": {
