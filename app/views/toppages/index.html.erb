@@ -30,7 +30,8 @@
 <% else %>
   <div class="center jumbotron">
     <div class="text-center">
-      <h1>❏れびゅうのテスト! the TaskList</h1>
+      <% Rails.application.secrets[:app_env_identifier] %>
+      <h1>❏れびゅうのテスト! the TaskList #{Rails.application.secrets[:basic_auth_enable]}</h1>
       <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
     </div>
   </div>
