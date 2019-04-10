@@ -32,6 +32,9 @@
     "BASIC_AUTH_ENABLE": {
       "required": true
     },
+    "HEROKU_APP_NAME": {
+      "required": true
+    },
     "RUN_MIGRATIONS_DURING_RELEASE": "true",
     "SEED_DB_DURING_RELEASE": "true",
     "CLEAR_CACHE_DURING_RELEASE": "true"
