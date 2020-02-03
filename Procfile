@@ -1,2 +1,2 @@
 release: bash ./release-tasks.sh
-web: bundle exec rails s -p 3000
+web: bundle exec rails s -p $PORT -e $RAILS_ENV
